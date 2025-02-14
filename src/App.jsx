@@ -3,7 +3,8 @@ import CmsForm from "./Cmsform";
 import CmsItem from "./CmsItem";
 
 const Cms = () => {
-  const [students, setSetstudents] = useState([]);
+  const [students, setStudents] = useState([]);
+
   return (
     <div>
       <CmsForm />

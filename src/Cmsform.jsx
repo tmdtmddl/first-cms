@@ -1,16 +1,30 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const CmsForm = ({ payload }) => {
-  const onChange = (e) => {};
+const CmsForm = ({ payload, setStudents, students }) => {
+  const [student, setStudent] = useState(payload ?? "");
+  // const [students, setStudents] = useState([]);
 
-  const onSubmit = (e) => {};
+  const onChange = (e) => {
+    setStudent(e.target.value);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (student.length === 0) {
+      alert("학생을 입력하세요");
+      return;
+    }
+
+    // const index = students.findIndex((item) => item === payload);
+  };
 
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div>
-        <label htmlFor=""></label>
-        <input type="text" />
+        <label htmlFor="">학생을 추가하세요.</label>
+        <input type="text" value={student} onChange={onChange} />
       </div>
       <button></button>
     </form>
@@ -18,3 +32,14 @@ const CmsForm = ({ payload }) => {
 };
 
 export default CmsForm;
+
+CmsForm.PropTypes = {
+  payload: PropTypes.string,
+
+  // CmsEdit: PropTypes.bool,
+
+  students: PropTypes.array,
+  setStudents: PropTypes.func,
+
+  // oncancel: PropTypes.func,
+};
