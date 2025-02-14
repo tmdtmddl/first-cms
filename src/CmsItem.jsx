@@ -1,4 +1,6 @@
 const CmsItem = () => {
+  const cmsDel = () => {};
+
   return (
     <div>
       <h1>CmsItem</h1>
