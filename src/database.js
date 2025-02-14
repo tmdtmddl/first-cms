@@ -6,3 +6,5 @@ export const person = {
   regi: "123213",
   job: "",
 };
+
+export const m1 = "강산";
