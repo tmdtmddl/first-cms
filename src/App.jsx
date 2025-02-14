@@ -1,12 +1,17 @@
 import { useState } from "react";
-import Cmsform from "./Cmsform";
+import CmsForm from "./Cmsform";
+import CmsItem from "./CmsItem";
 
 const Cms = () => {
   const [students, setSetstudents] = useState([]);
   return (
     <div>
-      <Cmsform />
-      <h1></h1>
+      <CmsForm />
+      <ul>
+        {students.map((student, index) => {
+          return <CmsItem key={student} />;
+        })}
+      </ul>
     </div>
   );
 };
