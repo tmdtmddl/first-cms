@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const Cmsform = () => {
+const CmsForm = ({ payload }) => {
   const onChange = (e) => {};
 
   const onSubmit = (e) => {};
@@ -17,4 +17,4 @@ const Cmsform = () => {
   );
 };
 
-export default Cmsform;
+export default CmsForm;
