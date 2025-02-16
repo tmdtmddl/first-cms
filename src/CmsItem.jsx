@@ -7,9 +7,9 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
   const cmsDelete = () => {
     if (confirm("삭제하시겠습니까?")) {
       setStudents((prev) => prev.filter());
-      alert("삭제했습니다.");
+      alert("삭제했습니다");
     } else {
-      alert("취소했습니다.");
+      alert("취소했습니다");
     }
   };
 
