@@ -16,7 +16,7 @@ const Cms = () => {
               setStudents={setStudents}
               students={students}
               index={index}
-              payload={students}
+              payload={student}
             />
           );
         })}

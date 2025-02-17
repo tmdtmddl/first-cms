@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const CmsItem = ({ setStudents, students, index, payload }) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const editHandler = () => setIsEditing((prev) => !prev);
+  const [cmsEdit, setCmsEdit] = useState(false);
+  const editHandler = () => setCmsEdit((prev) => !prev);
   const cmsDelete = () => {
     if (confirm("삭제하시겠습니까?")) {
       setStudents((prev) => prev.filter());
