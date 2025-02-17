@@ -58,10 +58,10 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
 
 export default CmsForm;
 
-CmsForm.PropTypes = {
+CmsForm.propTypes = {
   payload: PropTypes.string,
 
-  CmsEdit: PropTypes.bool,
+  cmsEdit: PropTypes.bool,
 
   students: PropTypes.array,
   setStudents: PropTypes.func,
