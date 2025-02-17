@@ -1,20 +1,22 @@
 # CmsForm
 
-1.받아올값
--cmsDelete,cmsEdit,setSudents, editHandler,students,payload
+1.받아올값 - cmsDelete=func - cmsEdit=func - setSudents=func - editHandler=func - students=arry - payload=string
 
 2.만들값
--sudent
+-sudent = object
 
 # CmsItem
 
 1.받아올값
 
-    -setStudents, students, index, payload
+    - setSudents=func
+    - students =arry
+    - index = index
+     - payload=string
 
 2.만들값
 
-    -editHandler,cmsDelete,cmsEdit
+- cmsDelete=func - cmsEdit=func - editHandler=func
 
 ## style
 
