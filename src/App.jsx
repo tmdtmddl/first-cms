@@ -2,6 +2,7 @@ import { useState } from "react";
 import CmsForm from "./Cmsform";
 import CmsItem from "./CmsItem";
 import "./cms.css";
+import { person } from "./database";
 
 const Cms = () => {
   const [students, setStudents] = useState([]);
