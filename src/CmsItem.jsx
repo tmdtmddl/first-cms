@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import CmsForm from "./Cmsform";
+import CmsForm from "./CmsForm";
 
 const CmsItem = ({ setStudents, students, index, payload }) => {
   const [cmsEdit, setCmsEdit] = useState(false);
@@ -29,7 +29,7 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
       ) : (
         <>
           <p>
-            {index + 1}. {payload}
+            {index + 1}. {payload.name}
           </p>
           <button onClick={editHandler}>수정</button>
           <button onClick={cmsDelete}>삭제</button>
