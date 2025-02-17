@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useRef } from "react";
 
-const newItem = "adsfasdfasdfasd";
 const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   const [student, setStudent] = useState(payload ?? "");
 
@@ -59,10 +58,10 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
 
 export default CmsForm;
 
-CmsForm.PropTypes = {
+CmsForm.propTypes = {
   payload: PropTypes.string,
 
-  CmsEdit: PropTypes.bool,
+  cmsEdit: PropTypes.bool,
 
   students: PropTypes.array,
   setStudents: PropTypes.func,
