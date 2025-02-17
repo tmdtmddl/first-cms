@@ -8,13 +8,25 @@ ul {
   list-style-type: none;
 }
 
+form {
+  display: flex;
+  column-gap: 5px;
+}
+
 button {
   background-color: royalblue;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
 }
 
 button:hover {
   background-color: skyblue;
   border-color: skyblue;
+}
+
+button:active {
+  outline: none;
 }
 
 li p {
