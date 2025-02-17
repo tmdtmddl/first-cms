@@ -19,7 +19,13 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
   return (
     <li>
       {cmsEdit ? (
-        <CmsForm onCancel={editHandler} />
+        <CmsForm
+          onCancel={editHandler}
+          setStudents={setStudents}
+          students={students}
+          payload={payload}
+          cmsEdit={cmsEdit}
+        />
       ) : (
         <>
           <p>
