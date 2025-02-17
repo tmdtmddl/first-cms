@@ -35,13 +35,17 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   return (
     <form onSubmit={onSubmit}>
       <div>
-        <label htmlFor="">학생을 추가하세요.</label>
+        <label htmlFor="">
+          {cmsEdit ? "학생 이름을 수정해주세요" : "학생을 추가하세요."}
+        </label>
         <input type="text" value={student} onChange={onChange} />
       </div>
       <button>{cmsEdit ? " 수정" : "추가"}</button>
-      <button type="button" onClick={onCancel}>
-        취소
-      </button>
+      {cmsEdit && (
+        <button type="button" onClick={onCancel}>
+          취소
+        </button>
+      )}
     </form>
   );
 };

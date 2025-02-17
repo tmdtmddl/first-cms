@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: royalblue;
+}
+
+button:hover {
+  background-color: skyblue;
+  border-color: skyblue;
+}
+
+li p {
+  font-size: 14px;
+}
+
+li button {
+  font-size: 16px;
+}
