@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CmsForm from "./Cmsform";
+import CmsForm from "./CmsForm";
 import CmsItem from "./CmsItem";
 
 const Cms = () => {
@@ -7,10 +7,18 @@ const Cms = () => {
 
   return (
     <div>
-      <CmsForm />
+      <CmsForm setStudents={setStudents} students={students} />
       <ul>
         {students.map((student, index) => {
-          return <CmsItem key={student} />;
+          return (
+            <CmsItem
+              key={student}
+              setStudents={setStudents}
+              students={students}
+              index={index}
+              payload={student}
+            />
+          );
         })}
       </ul>
     </div>

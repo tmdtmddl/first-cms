@@ -5,6 +5,7 @@ export const person = {
   Gender: "",
   regi: "123213",
   job: "",
+  sid: "",
 };
 
 export const m1 = "강산";
