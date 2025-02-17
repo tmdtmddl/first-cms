@@ -10,7 +10,15 @@ const Cms = () => {
       <CmsForm />
       <ul>
         {students.map((student, index) => {
-          return <CmsItem key={student} />;
+          return (
+            <CmsItem
+              key={student}
+              setStudents={setStudents}
+              students={students}
+              index={index}
+              payload={student}
+            />
+          );
         })}
       </ul>
     </div>
