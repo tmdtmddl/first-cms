@@ -26,7 +26,7 @@ const CmsForm = ({ payload, setStudents, students }) => {
         <label htmlFor="">학생을 추가하세요.</label>
         <input type="text" value={student} onChange={onChange} />
       </div>
-      <button></button>
+      <button>추가</button>
     </form>
   );
 };
