@@ -42,7 +42,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
     <form onSubmit={onSubmit}>
       <div>
         <label htmlFor="">
-          {cmsEdit ? "학생 이름을 수정해주세요" : "학생을 추가하세요."}
+          {cmsEdit ? "학생 이름을 수정해주세요" : "학생을 추가해주세요."}
         </label>
         <input type="text" value={student} onChange={onChange} ref={ref} />
       </div>
