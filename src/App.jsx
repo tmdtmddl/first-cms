@@ -8,7 +8,8 @@ const Cms = () => {
   const [students, setStudents] = useState([person]);
 
   return (
-    <div className="wrap">
+    <div>
+      <h1>학생명단</h1>
       <CmsForm setStudents={setStudents} students={students} />
       <ul>
         {students.map((student, index) => {
