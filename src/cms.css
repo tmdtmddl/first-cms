@@ -29,7 +29,21 @@ ul {
 li {
   border: 1px solid;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 100vw;
   display: flex;
   padding: 20px;
+  column-gap: 30px;
+}
+
+span.regifont {
+  font-size: 13px;
+}
+
+li div {
+  display: flex;
+  column-gap: 10px;
+}
+
+li div button.redbtn {
+  background-color: tomato;
 }
