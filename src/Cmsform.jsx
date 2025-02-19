@@ -6,11 +6,11 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   const [student, setStudent] = useState(
     payload ?? {
       name: "",
-      age: 0,
+      Gender: "",
+      age: "",
       Address: "",
       regi: "",
       tel: "",
-      Gender: "",
       job: "",
     }
   );
@@ -18,7 +18,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   const ref = useRef(null);
 
   const onChange = (e) => {
-    setStudent(e.target.value);
+    setStudent((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const onSubmit = (e) => {
@@ -55,46 +55,53 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
         <div>
           <input
             type="text"
-            value={student}
+            value={student.name}
             onChange={onChange}
             ref={ref}
+            name="name"
             placeholder="이름을 입력하세요."
           />
         </div>
 
         <div>
-          <select name="">
+          <select
+            value={student.Gender}
+            onChange={onChange}
+            ref={ref}
+            name="Gender"
+          >
             <option value="GenderPick" hidden>
               성별을 고르세요.
             </option>
-            <option value="m">남성</option>
-            <option value="f">여성</option>
-            <option value="ex">기타</option>
+            <option value="남성">남성</option>
+            <option value="여성">여성</option>
+            <option value="기타">기타</option>
           </select>
         </div>
 
         <div>
           <input
-            type="date"
-            value={student}
+            name="age"
+            type="text"
+            value={student.age}
             onChange={onChange}
             ref={ref}
             placeholder="나이를 입력하세요."
           />
         </div>
 
-        <div>
+        {/* <div>
           <input
-            type="number"
+            type="text"
             value={student}
             onChange={onChange}
             ref={ref}
             placeholder="나이를 입력하세요."
           />
-        </div>
+        </div> */}
       </div>
 
-      <div id="downForm">
+      {/* <div id="downForm">
         <div>
           <input type="text" placeholder="재직여부 혹은 직업을 적으세요" />
         </div>
@@ -118,7 +125,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
             placeholder="주소를 입력하세요."
           />
         </div>
-      </div>
+      </div> */}
 
       <button>{cmsEdit ? " 수정" : "추가"}</button>
       {cmsEdit && (
@@ -133,7 +140,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
 export default CmsForm;
 
 CmsForm.propTypes = {
-  payload: PropTypes.string,
+  payload: PropTypes.object,
 
   cmsEdit: PropTypes.bool,
 
