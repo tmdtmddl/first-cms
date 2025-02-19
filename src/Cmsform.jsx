@@ -1,8 +1,20 @@
 import PropTypes from "prop-types";
 import { useState, useRef } from "react";
+import "./CmsForm.css";
+import person from "./";
 
 const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
-  const [student, setStudent] = useState(payload ?? "");
+  const [student, setStudent] = useState(
+    payload ?? {
+      name: "",
+      age: 0,
+      Address: "",
+      regi: "",
+      tel: "",
+      Gender: "",
+      job: "",
+    }
+  );
 
   const ref = useRef(null);
 
@@ -85,14 +97,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
 
       <div id="downForm">
         <div>
-          <select name="">
-            <option value="재직" hidden>
-              재직 여부
-            </option>
-            <option value="working">재직중</option>
-            <option value="noWorking">무직</option>
-            <option value="extra">기타</option>
-          </select>
+          <input type="text" placeholder="재직여부 혹은 직업을 적으세요" />
         </div>
 
         <div>

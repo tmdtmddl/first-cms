@@ -1,11 +1,10 @@
 export const person = {
-  name: "hse",
+  name: "dlfjh",
   age: 20,
   Address: "대전",
   regi: "123213",
   tel: "01012341234",
-  Gender: "man",
-  sid: "23213",
+  Gender: "male",
   job: "재직자",
 };
 
@@ -15,7 +14,6 @@ export const person = {
 //    - 생년월일 = regi
 //    - 연락처 = tel
 //    - 성별 = Gender
-//    - 학생아이디 = sid
 //    - 재직자or실업자 =job
 
 export const m1 = "강산";

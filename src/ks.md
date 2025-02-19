@@ -1,17 +1,6 @@
-# container
+1.이름: input 2.성별: slect/ 남성 여성 기타 중 옵션 선택 3.생년월일 input/ type=date 사용 4.나이 input/ type=number 사용 5. 재직 여부 input 사용 6. 전화번호 input 사용(11자리가 아니면 경고) 7. 주소 input 사용
 
-<div id=container>
-<form > => flex, flex direction column
+payload(string), cmsEdit(boolean), students(array), setStudents(func), onCancel(func)
 
-<div id= "upform"> =>flex
-이름(input), 성별(select),
-생년월일(input), 나이(select),
-</div>
-<div id= downForm> =>flex
-재직중(select), 전화번호(input),주소(input)
-</div>
-<button>추가/수정</button>
-<button>수정중일때 취소</button>
-</form>
-
-<div>
+폼에서 학생을 추가함
+수정폼은 추가폼과 동일 내용만 바꿈

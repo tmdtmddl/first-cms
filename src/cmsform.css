@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#upForm,
+#downForm {
+  display: flex;
+  column-gap: 15px;
+}
+form button {
+  width: 80px;
+  height: 40px;
+}
