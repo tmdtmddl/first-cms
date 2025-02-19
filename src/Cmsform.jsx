@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { person } from "./database";
 import { useState, useRef } from "react";
 
 const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
@@ -13,7 +14,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (student.length === 0) {
+    if (person.namelength === 0) {
       alert("학생을 입력하세요");
       return ref.current?.focus();
     }
@@ -44,7 +45,24 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
         <label htmlFor="">
           {cmsEdit ? "학생 이름을 수정해주세요" : "학생을 추가해주세요."}
         </label>
-        <input type="text" value={student} onChange={onChange} ref={ref} />
+        <input type="text" value={person.name} onChange={onChange} ref={ref} />
+        <input type="text" value={person.age} onChange={onChange} ref={ref} />
+        <input
+          type="text"
+          value={person.Address}
+          onChange={onChange}
+          ref={ref}
+        />
+        <input type="text" value={person.regi} onChange={onChange} ref={ref} />
+        <input type="text" value={person.tel} onChange={onChange} ref={ref} />
+        <input
+          type="text"
+          value={person.Gender}
+          onChange={onChange}
+          ref={ref}
+        />
+        <input type="text" value={person.sid} onChange={onChange} ref={ref} />
+        <input type="text" value={person.job} onChange={onChange} ref={ref} />
       </div>
       <button>{cmsEdit ? " 수정" : "추가"}</button>
       {cmsEdit && (
