@@ -28,18 +28,24 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
         />
       ) : (
         <>
-          <p>
-            {payload.name},{payload.Gender},{payload.age}
-          </p>
-          <p>{payload.job}</p>
-          <p>{payload.tel}</p>
-          <p>{payload.Address}</p>
-          <p>{payload.regi}</p>
-          <p>{payload.sid}</p>
+          <span>
+            <p>
+              {payload.name},{payload.Gender},{payload.age},
+              <span className="regifont">{payload.job}</span>
+            </p>
+            <p>{payload.regi}</p>
+          </span>
+
+          <span>
+            <p>{payload.tel}</p>
+            <p>{payload.Address}</p>
+          </span>
 
           <div>
             <button onClick={editHandler}>수정</button>
-            <button onClick={cmsDelete}>삭제</button>
+            <button onClick={cmsDelete} className="redbtn">
+              삭제
+            </button>
           </div>
         </>
       )}
