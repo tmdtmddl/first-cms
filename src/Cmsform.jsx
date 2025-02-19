@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useRef } from "react";
 import "./CmsForm.css";
-import person from "./";
 
 const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   const [student, setStudent] = useState(

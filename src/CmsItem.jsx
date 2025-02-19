@@ -28,18 +28,14 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
         />
       ) : (
         <>
-          <div>
-            <p>
-              {index + 1}. {payload.name},{payload.age},{payload.Gender}
-            </p>
-          </div>
-          <div>
-            <p>{payload.job}</p>
-            <p>{payload.tel}</p>
-            <p>{payload.Address}</p>
-            <p>{payload.regi}</p>
-            <p>{payload.sid}</p>
-          </div>
+          <p>
+            {payload.name},{payload.Gender},{payload.age}
+          </p>
+          <p>{payload.job}</p>
+          <p>{payload.tel}</p>
+          <p>{payload.Address}</p>
+          <p>{payload.regi}</p>
+          <p>{payload.sid}</p>
 
           <div>
             <button onClick={editHandler}>수정</button>
