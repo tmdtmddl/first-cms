@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { person } from "./database";
 import { useState, useRef } from "react";
 
 const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
@@ -14,7 +13,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (person.namelength === 0) {
+    if (student.length === 0) {
       alert("학생을 입력하세요");
       return ref.current?.focus();
     }
@@ -41,29 +40,82 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <div>
-        <label htmlFor="">
-          {cmsEdit ? "학생 이름을 수정해주세요" : "학생을 추가해주세요."}
-        </label>
-        <input type="text" value={person.name} onChange={onChange} ref={ref} />
-        <input type="text" value={person.age} onChange={onChange} ref={ref} />
-        <input
-          type="text"
-          value={person.Address}
-          onChange={onChange}
-          ref={ref}
-        />
-        <input type="text" value={person.regi} onChange={onChange} ref={ref} />
-        <input type="text" value={person.tel} onChange={onChange} ref={ref} />
-        <input
-          type="text"
-          value={person.Gender}
-          onChange={onChange}
-          ref={ref}
-        />
-        <input type="text" value={person.sid} onChange={onChange} ref={ref} />
-        <input type="text" value={person.job} onChange={onChange} ref={ref} />
+      <div id="upForm">
+        <div>
+          <input
+            type="text"
+            value={student}
+            onChange={onChange}
+            ref={ref}
+            placeholder="이름을 입력하세요."
+          />
+        </div>
+
+        <div>
+          <select name="">
+            <option value="GenderPick" hidden>
+              성별을 고르세요.
+            </option>
+            <option value="m">남성</option>
+            <option value="f">여성</option>
+            <option value="ex">기타</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="date"
+            value={student}
+            onChange={onChange}
+            ref={ref}
+            placeholder="나이를 입력하세요."
+          />
+        </div>
+
+        <div>
+          <input
+            type="number"
+            value={student}
+            onChange={onChange}
+            ref={ref}
+            placeholder="나이를 입력하세요."
+          />
+        </div>
       </div>
+
+      <div id="downForm">
+        <div>
+          <select name="">
+            <option value="재직" hidden>
+              재직 여부
+            </option>
+            <option value="working">재직중</option>
+            <option value="noWorking">무직</option>
+            <option value="extra">기타</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="text"
+            value={student}
+            onChange={onChange}
+            ref={ref}
+            placeholder="전화번호를 -없이 입력하세요."
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            value={student}
+            onChange={onChange}
+            ref={ref}
+            placeholder="주소를 입력하세요."
+          />
+        </div>
+      </div>
+
       <button>{cmsEdit ? " 수정" : "추가"}</button>
       {cmsEdit && (
         <button type="button" onClick={onCancel}>

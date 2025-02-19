@@ -1,12 +1,12 @@
 export const person = {
   name: "hse",
-  age: 12,
-  Address: "lfsjdflds",
+  age: 20,
+  Address: "대전",
   regi: "123213",
-  tel: "010123213",
-  Gender: "dlfjs",
+  tel: "01012341234",
+  Gender: "man",
   sid: "23213",
-  job: "재자",
+  job: "재직자",
 };
 
 //    - 이름 = name
