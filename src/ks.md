@@ -3,7 +3,7 @@
 <div id=container>
 <form > => flex, flex direction column
 
-<div id= "upform"  >=>flex
+<div id= "upform"> =>flex
 이름(input), 성별(select),
 생년월일(input), 나이(select),
 </div>
