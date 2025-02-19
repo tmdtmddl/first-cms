@@ -33,16 +33,18 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
               {payload.name},{payload.Gender},{payload.age},
               <span className="regifont">{payload.job}</span>
             </p>
-            <p>{payload.regi}</p>
+            <p className="addressfont">{payload.regi}</p>
           </span>
 
           <span>
             <p>{payload.tel}</p>
-            <p>{payload.Address}</p>
+            <p className="addressfont">{payload.Address}</p>
           </span>
 
           <div>
-            <button onClick={editHandler}>수정</button>
+            <button onClick={editHandler} className="graybtn">
+              수정
+            </button>
             <button onClick={cmsDelete} className="redbtn">
               삭제
             </button>
