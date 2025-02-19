@@ -15,7 +15,7 @@ const Cms = () => {
         {students.map((student, index) => {
           return (
             <CmsItem
-              key={student}
+              key={student.tel}
               setStudents={setStudents}
               students={students}
               index={index}
