@@ -1,17 +1,19 @@
+:root {
+  --background: rgb(#fffbe0);
+}
+
 * {
-  margin: 0 auto;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
+}
+
+.wrap {
+  border: 1px solid;
 }
 
 ul {
   list-style-type: none;
-  row-gap: 10px;
-}
-
-form {
-  display: flex;
-  column-gap: 5px;
 }
 
 button {
@@ -32,7 +34,11 @@ button:active {
 }
 
 li {
-  border: 1px solid;
+  display: flex;
+  width: 100%;
+  column-gap: 10px;
+
+  padding: 10px;
 }
 
 li p {
