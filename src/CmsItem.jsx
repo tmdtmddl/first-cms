@@ -30,7 +30,7 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
         <>
           <span>
             <p>
-              {payload.name},{payload.Gender},{payload.age},
+              {index + 1}.{payload.name},{payload.Gender},{payload.age},
               <span className="regifont">{payload.job}</span>
             </p>
             <p className="addressfont">{payload.regi}</p>

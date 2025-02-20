@@ -6,12 +6,14 @@
   box-sizing: border-box;
   background-color: #fffbe0;
   max-width: 990px;
-
   margin: 0 auto;
 }
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 #wrap {
@@ -20,13 +22,14 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  margin-top: 0;
 }
 
 li {
   border: 1px solid;
   border-radius: 10px;
   max-width: 100vw;
-  display: flex;
+  display: grid;
   padding: 20px;
   column-gap: 30px;
   font-size: 16px;
@@ -47,6 +50,7 @@ li div {
   left: 15px;
   /* font-size: 12px; */
   /* padding: 10px; */
+  height: 45px;
 }
 
 li div button.redbtn {
@@ -62,4 +66,19 @@ li div button.graybtn {
 li div button.graybtn:hover {
   background-color: #e8e4e4;
   border-color: #e8e4e4;
+}
+
+@media screen and (min-width: 760px) {
+  li {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+  }
+  li div {
+    display: flex;
+    column-gap: 10px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+  }
 }
