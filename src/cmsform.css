@@ -39,6 +39,8 @@ form button {
   height: 40px;
   background-color: royalblue;
   color: white;
+  border: none;
+  border-radius: 5px;
 }
 form button:hover {
   background-color: skyblue;
