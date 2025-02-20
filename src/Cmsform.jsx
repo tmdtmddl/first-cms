@@ -85,96 +85,111 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
   return (
     <form onSubmit={onSubmit}>
       <div id="upForm">
-        <div>
-          <input
-            type="text"
-            value={student.name}
-            onChange={onChange}
-            ref={ref}
-            name="name"
-            placeholder="이름을 입력하세요."
-          />
-        </div>
+        <input
+          id="name"
+          type="text"
+          value={student.name}
+          onChange={onChange}
+          ref={ref}
+          name="name"
+          placeholder="이름을 입력하세요."
+          style={{
+            flex: 1,
+          }}
+        />
 
-        <div>
-          <select
-            value={student.Gender}
-            onChange={onChange}
-            ref={ref}
-            name="Gender"
-          >
-            <option value="GenderPick" hidden>
-              성별을 고르세요.
-            </option>
-            <option value="남성">남성</option>
-            <option value="여성">여성</option>
-            <option value="기타">기타</option>
-          </select>
-        </div>
+        <select
+          id="Gender"
+          value={student.Gender}
+          onChange={onChange}
+          ref={ref}
+          name="Gender"
+          style={{
+            flex: 1,
+          }}
+        >
+          <option value="GenderPick" hidden>
+            성별을 고르세요.
+          </option>
+          <option value="남성">남성</option>
+          <option value="여성">여성</option>
+          <option value="기타">기타</option>
+        </select>
 
-        <div>
-          <input
-            name="regi"
-            type="date"
-            value={student.regi}
-            onChange={onChange}
-            ref={ref}
-            placeholder="생년월일 입력하세요."
-          />
-        </div>
+        <input
+          id="regi"
+          name="regi"
+          type="date"
+          value={student.regi}
+          onChange={onChange}
+          ref={ref}
+          placeholder="생년월일 입력하세요."
+          style={{
+            flex: 1,
+          }}
+        />
 
-        <div>
-          <input
-            name="age"
-            type="text"
-            value={student.age}
-            onChange={onChange}
-            ref={ref}
-            placeholder="나이를 입력하세요."
-          />
-        </div>
+        <input
+          id="age"
+          name="age"
+          type="text"
+          value={student.age}
+          onChange={onChange}
+          ref={ref}
+          placeholder="나이를 입력하세요."
+          style={{
+            flex: 1,
+          }}
+        />
       </div>
 
       <div id="downForm">
-        <div>
-          <input
-            type="text"
-            name="job"
-            onChange={onChange}
-            value={student.job}
-            placeholder="재직여부 혹은 직업을 적으세요"
-          />
-        </div>
+        <input
+          type="text"
+          name="job"
+          onChange={onChange}
+          value={student.job}
+          placeholder="직업을 적으세요"
+          style={{
+            flex: 1,
+          }}
+        />
 
-        <div>
-          <input
-            type="text"
-            value={student.tel}
-            name="tel"
-            onChange={onChange}
-            ref={ref}
-            placeholder="전화번호를 -없이 입력하세요."
-          />
-        </div>
+        <input
+          type="text"
+          value={student.tel}
+          name="tel"
+          onChange={onChange}
+          ref={ref}
+          placeholder="전화번호를 -없이 입력하세요."
+          style={{
+            flex: 1,
+            width: "300px",
+          }}
+        />
 
-        <div>
-          <input
-            type="text"
-            value={student.Address}
-            name="Address"
-            onChange={onChange}
-            ref={ref}
-            placeholder="주소를 입력하세요."
-          />
-        </div>
+        <input
+          id="address"
+          type="text"
+          value={student.Address}
+          name="Address"
+          onChange={onChange}
+          ref={ref}
+          placeholder="주소를 입력하세요."
+          style={{
+            flex: 1,
+          }}
+        />
       </div>
 
-      <button>{cmsEdit ? " 수정" : "추가"}</button>
-      {cmsEdit && (
-        <button type="button" onClick={onCancel}>
-          취소
-        </button>
-      )}
+      <div>
+        <button>{cmsEdit ? " 수정" : "추가"}</button>
+        {cmsEdit && (
+          <button type="button" onClick={onCancel}>
+            취소
+          </button>
+        )}
+      </div>
     </form>
   );
 };

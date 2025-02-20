@@ -1,6 +1,31 @@
 form {
   display: flex;
   flex-direction: column;
+  row-gap: 25px;
+}
+
+form input,
+form select {
+  height: 50px;
+  min-width: 50px;
+  /* width: 100px; */
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+select {
+  font-size: 16px;
+}
+
+#upForm input,
+#upForm select {
+  display: flex;
+}
+
+#downForm input {
+  display: flex;
 }
 
 #upForm,
@@ -8,7 +33,13 @@ form {
   display: flex;
   column-gap: 15px;
 }
+
 form button {
   width: 80px;
   height: 40px;
+  background-color: royalblue;
+  color: white;
+}
+form button:hover {
+  background-color: skyblue;
 }
