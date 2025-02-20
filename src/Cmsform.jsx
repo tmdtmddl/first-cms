@@ -49,7 +49,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
       return ref.current?.focus();
     }
 
-    if (student.tel.length !== 11) {
+    if (student.tel.length < 9 || student.tel.length > 11) {
       alert("전화번호를 정확히 입력하세요");
       return ref.current?.focus();
     }
@@ -75,6 +75,9 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
     });
 
     alert(cmsEdit ? "수정되었습니다." : "추가되었습니다.");
+    if (cmsEdit && onCancel) {
+      onCancel();
+    }
 
     setStudent("");
   };
