@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CmsForm from "./Cmsform";
 import CmsItem from "./CmsItem";
 import "./cms.css";
 import { person } from "./database";
 
 const Cms = () => {
-  const [students, setStudents] = useState([person]);
+  const loadStudents = () => {
+    const savedStudents = localStorage.getItem("students");
+    return savedStudents ? JSON.parse(savedStudents) : [];
+  };
 
+  const [students, setStudents] = useState(loadStudents);
+
+  useEffect(() => {
+    localStorage.setItem("students", JSON.stringify(students));
+  }, [students]);
   return (
     <div
       id="wrap"
