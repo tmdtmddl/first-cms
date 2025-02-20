@@ -78,6 +78,10 @@ li .gap {
   flex: 1;
 }
 
+h1 {
+  border-bottom: 3px solid;
+}
+
 @media screen and (min-width: 990px) {
   li .gap {
     grid-template-columns: repeat(3, 1fr);
