@@ -54,13 +54,13 @@ li button.graybtn {
   outline: none;
   padding: 5px;
   outline: none;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 li button.redbtn {
   background-color: tomato;
   outline: none;
   padding: 5px;
-  border-radius: 3px;
+  border-radius: 4px;
   outline: none;
 }
 
