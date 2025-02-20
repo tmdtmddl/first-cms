@@ -79,7 +79,15 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
       onCancel();
     }
 
-    setStudent("");
+    setStudent({
+      name: "",
+      Gender: "",
+      age: "",
+      Address: "",
+      regi: "",
+      tel: "",
+      job: "",
+    });
   };
 
   return (
