@@ -28,18 +28,20 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
         />
       ) : (
         <>
-          <span>
-            <p>
-              {payload.name},{payload.Gender},{payload.age},
-              <span className="regifont">{payload.job}</span>
-            </p>
-            <p className="addressfont">{payload.regi}</p>
-          </span>
+          <div className="gap">
+            <p>{index + 1}.</p>
+            <p> {payload.name}</p>
+            <p>{payload.Gender}</p>
+            <p>{payload.age}</p>
+            <p className="regifont">{payload.job}</p>
 
-          <span>
+            <p className="addressfont">{payload.regi}</p>
+          </div>
+
+          <div>
             <p>{payload.tel}</p>
             <p className="addressfont">{payload.Address}</p>
-          </span>
+          </div>
 
           <div>
             <button onClick={editHandler} className="graybtn">

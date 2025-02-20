@@ -8,7 +8,12 @@ const Cms = () => {
   const [students, setStudents] = useState([person]);
 
   return (
-    <div id="wrap">
+    <div
+      id="wrap"
+      style={{
+        margin: "0 auto",
+      }}
+    >
       <h1>학생명단</h1>
       <CmsForm setStudents={setStudents} students={students} />
       <ul>
