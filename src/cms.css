@@ -56,12 +56,18 @@ li button.graybtn {
   outline: none;
   border-radius: 4px;
 }
+li button.graybtn:hover {
+  background-color: lightgray;
+}
 li button.redbtn {
   background-color: tomato;
   outline: none;
   padding: 5px;
   border-radius: 4px;
   outline: none;
+}
+li button.redbtn:hover {
+  background-color: lightcoral;
 }
 
 li .gap {
