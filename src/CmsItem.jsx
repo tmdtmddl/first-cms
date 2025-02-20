@@ -43,7 +43,7 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
             <p className="addressfont">{payload.Address}</p>
           </div>
 
-          <div>
+          <div className="btns">
             <button onClick={editHandler} className="graybtn">
               수정
             </button>
