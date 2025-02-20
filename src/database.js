@@ -2,7 +2,7 @@ export const person = {
   name: "dlfjh",
   age: 20,
   Address: "대전",
-  regi: "123213",
+  regi: "123123",
   tel: "01012341234",
   Gender: "male",
   job: "재직자",
