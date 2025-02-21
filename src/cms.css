@@ -20,6 +20,11 @@ ul {
   row-gap: 15px;
 }
 
+p.namefont {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 #wrap {
   /* width: 100vw; */
   /* margin: 0 auto; */
@@ -38,6 +43,7 @@ li {
   border: 1px solid;
   border-radius: 6px;
   padding: 20px;
+  background-color: #fdfdfd;
 }
 
 li div.btns {
@@ -55,7 +61,7 @@ li button.graybtn {
   padding: 5px;
   outline: none;
   border-radius: 4px;
-  cursor: pointer;
+  border: none;
 }
 li button.graybtn:hover {
   background-color: lightgray;
@@ -66,7 +72,7 @@ li button.redbtn {
   padding: 5px;
   border-radius: 4px;
   outline: none;
-  cursor: pointer;
+  border: none;
 }
 li button.redbtn:hover {
   background-color: lightcoral;

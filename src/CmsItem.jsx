@@ -29,8 +29,7 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
       ) : (
         <>
           <div className="gap">
-            <p>{index + 1}.</p>
-            <p> {payload.name}</p>
+            <p className="namefont"> {payload.name}</p>
             <p>{payload.Gender}</p>
             <p>{payload.age}</p>
             <p className="regifont">{payload.job}</p>
