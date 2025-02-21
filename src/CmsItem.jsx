@@ -28,20 +28,23 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
         />
       ) : (
         <>
-          <div className="gap">
-            <p className="namefont"> {payload.name}</p>
-            <p>{payload.Gender}</p>
-            <p>{payload.age}</p>
-            <p className="regifont">{payload.job}</p>
+          <div className="wrap123">
+            <div className="gap">
+              <p className="namefont">이름: {payload.name}</p>
+              <p>성별: {payload.Gender}</p>
+              <p className="regifont">직업: {payload.job}</p>
+            </div>
 
-            <p className="addressfont">{payload.regi}</p>
+            <div>
+              <p className="addressfont">
+                나이: {payload.age} 생년월일: {payload.regi}
+              </p>
+
+              <p>전화번호: {payload.tel}</p>
+            </div>
+
+            <p className="addressfont">주소: {payload.Address}</p>
           </div>
-
-          <div>
-            <p>{payload.tel}</p>
-            <p className="addressfont">{payload.Address}</p>
-          </div>
-
           <div className="btns">
             <button onClick={editHandler} className="graybtn">
               수정
