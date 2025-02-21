@@ -20,6 +20,11 @@ ul {
   row-gap: 15px;
 }
 
+p.namefont {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 #wrap {
   /* width: 100vw; */
   /* margin: 0 auto; */
@@ -38,7 +43,7 @@ li {
   border: 1px solid;
   border-radius: 6px;
   padding: 20px;
-  background-color: rgb(255, 255, 248);
+  background-color: #fdfdfd;
 }
 
 li div.btns {
@@ -56,9 +61,7 @@ li button.graybtn {
   padding: 5px;
   outline: none;
   border-radius: 4px;
-  cursor: pointer;
   border: none;
-  outline: none;
 }
 li button.graybtn:hover {
   background-color: lightgray;
@@ -69,28 +72,16 @@ li button.redbtn {
   padding: 5px;
   border-radius: 4px;
   outline: none;
-  cursor: pointer;
   border: none;
-  outline: none;
 }
-
 li button.redbtn:hover {
   background-color: lightcoral;
 }
 
 li .gap {
-  display: flex;
-  /* grid-template-columns: 2fr 1fr 1fr 1fr; */
-
-  text-align: left;
-}
-li .gap > div {
-  flex-direction: row;
-}
-
-div.wrap2 {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex: 1;
 }
 
 h1 {

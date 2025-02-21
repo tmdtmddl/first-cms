@@ -28,23 +28,18 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
         />
       ) : (
         <>
-          <div className="wrap2">
-            <div className="gap">
-              <div>
-                <p className="name"> {payload.name}</p>
-                <p>{payload.Gender}</p>
-                <p>{payload.age}</p>
-                <p className="regifont">{payload.job}</p>
-              </div>
-              <div>
-                <p>{payload.tel}</p>
-              </div>
-            </div>
+          <div className="gap">
+            <p className="namefont"> {payload.name}</p>
+            <p>{payload.Gender}</p>
+            <p>{payload.age}</p>
+            <p className="regifont">{payload.job}</p>
 
-            <div>
-              <p className="addressfont">{payload.regi}</p>
-              <p className="addressfont">{payload.Address}</p>
-            </div>
+            <p className="addressfont">{payload.regi}</p>
+          </div>
+
+          <div>
+            <p>{payload.tel}</p>
+            <p className="addressfont">{payload.Address}</p>
           </div>
 
           <div className="btns">
