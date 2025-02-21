@@ -37,7 +37,7 @@ const CmsItem = ({ setStudents, students, index, payload }) => {
 
             <div>
               <p className="addressfont">
-                나이: {payload.age} 생년월일: {payload.regi}
+                나이: {payload.age}세 생년월일: {payload.regi}
               </p>
 
               <p>전화번호: {payload.tel}</p>
