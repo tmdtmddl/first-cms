@@ -40,9 +40,6 @@ form button {
   border: none;
   border-radius: 5px;
 }
-form button:hover {
-  background-color: skyblue;
-}
 
 /* @media screen and (max-width: 990px) {
   form {
@@ -60,11 +57,18 @@ form button:hover {
 }
 #cancelBtn:hover {
   background-color: lightcoral;
+  cursor: pointer;
 }
 
 #btns {
-  column-gap: 5px;
+  column-gap: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#orBtn:hover {
+  background-color: skyblue;
+  cursor: pointer;
 }
