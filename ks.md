@@ -13,6 +13,8 @@ payload(object), cmsEdit(boolean), students(array), setStudents(func), onCancel(
 ㄴ. useRef를 이용하여 경고가 뜨고 난 후 경고가 난 input에 focus하도록 코드를 작성
 
 ㄷ.students, setStudents를 App파일에서 가져와 폼에서 작성한 student를 배열에 저장
+// 수정할 때 payload에서 추가했던 정보를 가져와서 수정할 수 있게 구현했다.
+
 ㄹ. cmsItem 파일에서 cmsEdit, onCancel를 가져와서 폼을 수정하는 로직과 삭제하는 로직을 구현
 // cmsItem에서 수정중 혹은 아닐경우를 boolean을 이용하여 cmsEdit이면 수정하는 폼이 나오고 아니면 추가하는 폼을 구현
 // 수정중이면 수정할 수 있는 폼과 취소할 수 있는 버튼을 구현
@@ -22,7 +24,7 @@ payload(object), cmsEdit(boolean), students(array), setStudents(func), onCancel(
 # 팀 프로젝트에 대한 피드백
 
 1. 어려웠던 점: 설명을 어떻게 해야할지에 대한 어려움: 머릿속으로는 그림이 그려지는데 이를 어떻게 설명할 지가 막막했습니다.
-   -> 보완할 것: 급하게 생각하지 말고 머릿속으로 할 말을 정리하고 팀장에게 보고
+   -> 보완할 것: 급하게 생각하지 말고 머릿속으로 할 말을 정리하거나 피그마로 그려서 자신의 생각을 팀장에게 보고
 
 - 타입 선정과 받아올 것들이 무엇인지 어려웠습니다. payload를 문자열인줄 알았지만 전에 student 안에 있는 값들을 가져와야 하기 때문에 객체로 수정했습니다.
 

@@ -190,10 +190,10 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
         />
       </div>
 
-      <div>
+      <div id="btns">
         <button>{cmsEdit ? " 수정" : "추가"}</button>
         {cmsEdit && (
-          <button type="button" onClick={onCancel}>
+          <button id="cancelBtn" type="button" onClick={onCancel}>
             취소
           </button>
         )}

@@ -50,3 +50,21 @@ form button:hover {
     grid: 2fr 2fr;
   }
 } */
+
+#cancelBtn {
+  background-color: tomato;
+  outline: none;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+#cancelBtn:hover {
+  background-color: lightcoral;
+}
+
+#btns {
+  column-gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
