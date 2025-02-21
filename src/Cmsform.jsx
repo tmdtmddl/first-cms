@@ -140,7 +140,7 @@ const CmsForm = ({ payload, cmsEdit, students, setStudents, onCancel }) => {
         <input
           id="age"
           name="age"
-          type="text"
+          type="number"
           value={student.age}
           onChange={onChange}
           ref={ref}
