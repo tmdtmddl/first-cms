@@ -43,3 +43,10 @@ form button {
 form button:hover {
   background-color: skyblue;
 }
+
+/* @media screen and (max-width: 990px) {
+  form {
+    display: grid;
+    grid: 2fr 2fr;
+  }
+} */
