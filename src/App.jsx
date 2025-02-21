@@ -21,7 +21,7 @@ const Cms = () => {
         margin: "0 auto",
       }}
     >
-      <h1>학생명단</h1>
+      <h1 id="h1">학생명단</h1>
       <CmsForm setStudents={setStudents} students={students} />
       <ul>
         {students.map((student, index) => {
